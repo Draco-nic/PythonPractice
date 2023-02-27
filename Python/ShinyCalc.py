@@ -1,21 +1,20 @@
 #improved probability calc
 while True:
-    Gen = (input("Generation"))
+    Gen = int(float(input("Generation")))
+    EN = int(float(input("Encounters")))
 
-    if Gen == '3' or '4' or '5':
+    if Gen <= 5:
         SO = 1/8192
-        EN = (input("Encounters"))
-        EN = int(float(EN))
+        EN = (EN)
 
         #Chance to find
         CTF = 1-(1-(1/8192))**(EN)
         #Chance to not find
         CNF = (1-(1/8192))**(EN)
 
-    elif Gen == '6' or '7' or '8' or '9':
+    elif Gen >= 6:
         SO = 1/4096
-        EN = (input("Encounters"))
-        EN = int(float(EN))
+        EN = (EN)
 
         #Chance to find
         CTF = 1-(1-(1/4096))**(EN)
